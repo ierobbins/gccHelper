@@ -14,9 +14,7 @@ int main ()
 {
     cout << "Compiling cpp and h files in c:\\users\\iedward\\projects\\cppTutorials\n\n";
 
-    // Build command to execute.  For example if the input
-    // file name is a.cpp, then str holds "gcc -o a.out a.cpp"
-    // Here -o is used to specify executable file name
+    // Build command to execute.
     string str = "g++ -std=c++11 -o ";
 
     string input;
@@ -53,7 +51,7 @@ void comp_list(std::string *str){
     DIR *dir;
     struct dirent *ent;
         if ((dir = opendir ("c:\\users\\iedward\\projects\\cppTutorial")) != NULL) {
-            /* print all the files and directories within directory */
+            /* print all the files within directory */
             while ((ent = readdir (dir)) != NULL) {
                 printf("file in dir: %s\n", ent -> d_name);
                 if(check_dir(ent -> d_name)){
